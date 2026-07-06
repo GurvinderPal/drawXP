@@ -1,0 +1,185 @@
+.xp-login-screen {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: 78px minmax(0, 1fr) 86px;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 78% 25%, rgba(255, 255, 255, 0.18), transparent 22%),
+    linear-gradient(180deg, #6aa3ed 0%, #2a6fde 38%, #174cb7 100%);
+  font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+.login-top-band,
+.login-bottom-band {
+  background: linear-gradient(180deg, #003f9e, #024ec3 45%, #00358f);
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.35),
+    inset 0 -1px rgba(0, 0, 0, 0.35);
+}
+
+.login-center {
+  display: grid;
+  grid-template-columns: minmax(260px, 460px) minmax(300px, 430px);
+  align-items: center;
+  justify-content: center;
+  gap: 58px;
+  padding: 28px;
+}
+
+.login-brand {
+  text-align: right;
+  padding-right: 54px;
+  border-right: 1px solid rgba(255, 255, 255, 0.45);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.login-brand h1 {
+  margin: 10px 0 8px;
+  color: #fff;
+  font-size: 54px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.login-brand p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.windows-flag {
+  display: inline-block;
+  width: 78px;
+  height: 58px;
+  transform: skewY(-8deg);
+  background:
+    linear-gradient(90deg, transparent 47%, #fff 48% 52%, transparent 53%),
+    linear-gradient(180deg, transparent 47%, #fff 48% 52%, transparent 53%),
+    linear-gradient(135deg, #f04431 0 25%, #1ba64a 26% 50%, #1f73d9 51% 75%, #f2cd29 76%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login-panel {
+  width: 100%;
+  color: #111;
+}
+
+.user-tile {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.12));
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: inset 1px 1px rgba(255, 255, 255, 0.4);
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font: 700 38px/1 Tahoma, sans-serif;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.28), transparent 36%),
+    linear-gradient(180deg, #8fd464, #248f35);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35);
+}
+
+.login-panel label {
+  display: grid;
+  gap: 5px;
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.45);
+}
+
+.login-panel input {
+  height: 25px;
+  padding: 2px 5px;
+  border: 2px solid #7f9db9;
+  background: #fff;
+  color: #111;
+  font: 14px/1 Tahoma, sans-serif;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.18);
+}
+
+.password-row {
+  margin-top: 13px;
+}
+
+.login-error {
+  margin: 12px 0 0;
+  padding: 8px;
+  color: #fff;
+  background: rgba(126, 0, 0, 0.58);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-size: 13px;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.login-actions button {
+  min-width: 82px;
+  height: 27px;
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  color: #111;
+  background: linear-gradient(180deg, #fff 0%, #ece9d8 52%, #d5d1bd 100%);
+  box-shadow:
+    inset 1px 1px #fff,
+    inset -1px -1px #8a8675,
+    1px 1px 2px rgba(0, 0, 0, 0.35);
+  font: 13px/1 Tahoma, sans-serif;
+}
+
+.login-actions button:disabled {
+  color: #777;
+}
+
+.login-bottom-band {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 36px;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .xp-login-screen {
+    grid-template-rows: 50px minmax(0, 1fr) 86px;
+  }
+
+  .login-center {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-content: center;
+  }
+
+  .login-brand {
+    text-align: left;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .login-brand h1 {
+    font-size: 40px;
+  }
+
+  .login-bottom-band {
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px 20px;
+  }
+}
